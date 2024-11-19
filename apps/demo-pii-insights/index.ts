@@ -30,7 +30,7 @@ export function fetchValue(input: FetchInput): void {
 export function storeValue(input: StoreInput): void {
 
     if (input.key && input.value) {
-        Ledger.getTable(myTableName).set(input.key, input.value);
+        Ledger.getTable(myTableName).set(input.key, input.value + " 😎");
         Notifier.sendJson<StoreOutput>({
             success: true
         });
